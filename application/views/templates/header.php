@@ -27,7 +27,8 @@
                                 $logged = $this->session->userdata("logged"); 
                                 $usuario = $this->session->userdata("usuario");
                                 $usuario = explode(" ", $usuario);
-                                $id = $this->session->userdata("id");         
+                                $id = $this->session->userdata("id");  
+                                $localizacao = $this->session->userdata('localizacao');       
                         ?>
                                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                                         <div class="container-fluid">
@@ -44,7 +45,8 @@
                                                                 </li>
                                                 
                                                                 <li class="nav-item">
-                                                                <a class="nav-link" href="<?php if(!$logged) echo site_url('usuarios/login'); else echo site_url('animais/register'); ?>"><?php echo $this->lang->line('Rehome'); ?></a>
+                                                                <a class="nav-link" onclick="rehome();">
+                                                                        <?php echo $this->lang->line('Rehome'); ?></a>
                                                                 </li>
                                                                 
                                                                 <li class="nav-item">
@@ -121,3 +123,15 @@
                                 </nav>                    
                         </header>
                         <h1 class="page-title"><?php echo $title; ?></h1>
+<script>
+        function rehome(){
+                
+        <?php if(!$logged){ ?> location.replace("<?php echo site_url('usuarios/login'); ?>")
+        <?php } elseif(!$localizacao){
+                $this->session->set_flashdata("danger", $this->lang->line("Need_location")); ?>
+                location.replace("<?php echo site_url('usuarios/'.$id); ?>")
+        <?php }
+        else{ ?> location.replace("<?php echo site_url('animais/register'); ?>") 
+        <?php } ?>
+        }
+</script>

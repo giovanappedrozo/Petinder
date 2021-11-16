@@ -439,7 +439,8 @@ class Usuarios extends CI_Controller {
                                 $data = array(
                                         'usuario' => $query['nome'],
                                         'id' => $query['id_usuario'],
-                                        'logged' => true
+                                        'logged' => true,
+                                        'localizacao' => $query['localizacao']
                                         );
                                 $this->session->set_userdata($data);
                                 $this->usuarios_model->verify_animals();

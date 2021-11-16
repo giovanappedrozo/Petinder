@@ -135,6 +135,7 @@ class Animais extends CI_Controller {
 
         public function register()
         {
+                $usuario = 
                 $lang = $this->session->get_userdata('site_lang');
                 $lang = $lang['site_lang'];
                 if($lang == 'portuguese') $data['lang'] = 'pt_br';

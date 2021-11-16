@@ -1,4 +1,6 @@
-  <script>
+<a class="btn-denunciar" href="http://www.ssp.sp.gov.br/depa/">Denunciar violencia</a>
+
+<script>
   function load_messages(){
     $.ajax({
       url:"<?php echo site_url('mensagens/load_messages'); ?>",

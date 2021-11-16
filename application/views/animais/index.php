@@ -1,19 +1,23 @@
 <main class="container">
         <div class="video-wrapper">
-                <div class="video-text"><br><br>
-                        <h2 class="page-title">Por que adotar?</h1><br>
+                <div class="video-text">
+                        <h2 class="page-title"><?php echo $this->lang->line('Why_adopt'); ?><span><?php echo $this->lang->line('Adopt'); ?>?</span></h2><br>
                         <button type="submit" class="btn btn-primary btn-rounded btn-lg" name='avaliacao' value='TRUE'>
-                                Sobre adocao
+                                <?php echo $this->lang->line('About_adoption'); ?>
                         </button>
                         <button type="submit" class="btn btn-primary btn-rounded btn-lg" name='avaliacao' value='TRUE'>
-                                Quem somos
+                                <?php echo $this->lang->line('About_us'); ?>
                         </button>
                         <button type="submit" class="btn btn-primary btn-rounded btn-lg" name='avaliacao' value='TRUE'>
-                                Curiosidades
+                                <?php echo $this->lang->line('Curiosities'); ?>
                         </button>
                 </div>
-                <iframe class="video" src="https://www.youtube.com/embed/hjOY9BVqtlg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+                <?php if($this->session->userdata('site_lang') == 'portuguese'){ ?>
+                        <iframe class="video" src="https://www.youtube.com/embed/hjOY9BVqtlg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <?php } else { ?>
+                        <iframe class="video" src="https://www.youtube.com/embed/3LzNQY3aT4c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <?php } ?>
+        </div><br>
         
 <?php 
 
