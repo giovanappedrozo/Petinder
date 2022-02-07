@@ -309,13 +309,13 @@ main{
     font-size: 300%;
 }
 
-.video-text button{
+.video-text a{
     background-color: rgb(0, 0, 0) !important;
     color: rgb(255, 255, 255);
     font-weight: bold;
 }
 
-.video-text button:hover{
+.video-text a:hover{
     background-color: rgb(255, 255, 255) !important;
     color: rgb(156, 22, 22);
 }
@@ -344,6 +344,19 @@ main{
 .btn-denunciar:hover{
     color: white;
     background-color: rgb(156, 22, 22);
+}
+
+.text-about{
+    width: 85%;
+    margin-left: 9%;
+}
+
+.follow{
+    font-size: medium;
+}
+
+.menu{
+    color: rgb(120, 118, 121) !important;
 }
 
 @media (max-width:992px){

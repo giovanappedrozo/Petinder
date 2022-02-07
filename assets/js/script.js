@@ -37,16 +37,16 @@ $('#chat_area').animate({
 
 setInterval(function(){
   load_not_msg();
-}, 1000);
+}, 60000);
 
 setInterval(function(){
   load_notifications();
-}, 1000);
+}, 60000);
 
 function racas(){
   var especie = $("#reg-especie option:selected").val();
   $.ajax({
-          url:"https://petinderapp.azurewebsites.net/index.php/animais/racas",
+          url:"racas",
           method:"POST",
           data: {especie: especie},
           dataType: 'json',
@@ -54,7 +54,6 @@ function racas(){
                   var output = '';
                   if(data.length > 0)
                   {
-                    console.log();
                           for(var count = 0; count < data.length; count++)
                           {
                             if(count == 0 && window.location.href == 'https://petinderapp.azurewebsites.net/index.php/animais/register')

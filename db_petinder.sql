@@ -319,8 +319,9 @@ CREATE TABLE IF NOT EXISTS denuncia (
 );
 
 CREATE TABLE IF NOT EXISTS resetsenha (
-    id_reset SERIAL PRIMARY KEY,
-    token varchar(255) not null,
-    email VARCHAR(70),
-    datahora TIMESTAMP not null DEFAULT CURRENT_TIMESTAMP 
+        id_reset SERIAL PRIMARY KEY,
+        token varchar(255) not null,
+        id_usuario INTEGER,
+        CONSTRAINT fk_usuario FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario),
+        datahora TIMESTAMP not null DEFAULT CURRENT_TIMESTAMP 
 );
