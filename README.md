@@ -25,4 +25,4 @@ Clone o repositório do projeto; crie um banco de dados local pgsql com nome e s
 </ul>
 
 <h2> Acesse o PETINDER </h2><br>
-Veja a aplicação implementada em: https://petinderapp.azurewebsites.net/index.php/petinder
+Veja a aplicação implementada em: https://petinderapp.azurewebsites.net/index.php/animais
